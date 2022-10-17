@@ -1,0 +1,3402 @@
+/*----------- CONTENIDO GENERAL DE LA PÁGINA ---------------*/
+
+*{
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+body {
+	background: white;
+	font-size: 5px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1 {
+	font-size: 8em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	color: white;
+}
+h2 {
+	font-size: 6.5em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	color: white;
+}
+h3 {
+	font-size: 4em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	color: white;
+}
+h4 {
+	font-size: 3em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	color: white;
+}
+p {
+	font-size: 3.5em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	color: white;
+}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+nav {
+	width: 100%;
+	height: auto;
+}
+
+.barra-contacto {
+	width: 100%;
+	height: auto;
+	padding: 0.7% 0;
+	background: linear-gradient(180deg, rgba(49,184,205,1) 0%, rgba(90,198,215,1) 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.barra-contenido {
+	width: 1200px;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.contacto-texto {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.contacto-texto h4 {
+	width: 100%;
+	font-size: 2.7em;
+	margin-right: 8%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+h4 i {
+	width: 10%;
+	margin-right: 1%;
+}
+.contacto-icono {
+	width: 50%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: end;
+}
+.contacto-icono a {
+	font-size: 4.5em;
+	margin-right: 5%;
+	color: white;
+	text-decoration: none;
+}
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+.navegacion {
+	background: white;
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s ease all;
+}
+.navbar {
+	width: 1200px;
+	padding: 1% 0;
+	z-index: 14;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+nav:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+.logo {
+	width: 150px;
+	background: url(images/logo-color.png);
+	background-size: cover;
+	padding-right: 0.5%;
+	height: auto;
+	transition: all 300ms ease;
+}
+.logo img {
+	width: 100%;
+	filter: opacity(0%);
+}
+nav ul {
+	float: right;
+	list-style: none;
+	position: relative;
+}
+nav ul li {
+	display: inline-block;
+	margin: 0 10px;
+}
+nav ul li a {
+	color: #31b8cd;
+	line-height: 70px;
+	text-decoration: none;
+	font-size: 3em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	padding: 8px 15px;
+	border-radius: 20px;
+	transition: all 300ms ease;
+}
+nav ul li a:hover {
+	color: white;
+	background: #31b8cd;
+	border-radius: 20px;
+	transition: all 300ms ease;
+}
+nav ul ul li a:hover {
+	box-shadow: none;
+}
+nav ul ul {
+	position: absolute;
+	top: 90px;
+	border-top: #258a9a 2px solid ;
+	opacity: 0;
+	visibility: hidden;
+	transition: top .3s;
+}
+nav ul ul ul {
+	border-top: none;
+}
+nav ul li:hover > ul {
+	top: 70px;
+	opacity: 1;
+	visibility: visible;
+}
+nav ul ul li {
+	position: relative;
+	margin: 0px;
+	width: 300px;
+	z-index: 15;
+	background: white;
+	float: none;
+	display: list-item;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.navbar ul ul li:hover {
+	color: white;
+	border-radius: 0px;
+	background: #31b8cd;
+	transition: all 300ms ease;
+}
+nav ul ul li a {
+	line-height: 50px;
+	padding-right: 50px;
+}
+.navbar ul ul li .boton-servicio {
+	color: #258a9a;
+	border-radius: 0;
+	background: none;
+	transition: all 300ms ease;
+}
+.navbar ul ul li .boton-servicio:hover {
+	color: white;
+	border-radius: 0;
+	background: none;
+	transition: all 300ms ease;
+}
+.navbar ul ul li:hover .boton-servicio {
+	color: white;
+	border-radius: 0;
+	background: none;
+	transition: all 300ms ease;
+}
+nav ul ul ul li {
+	position: relative;
+	top: -60px;
+	left: 150px;
+}
+.show,.icon,input {
+	display: none;
+}
+.fa-plus {
+	font-size: 15px;
+	margin-left: 40px;
+}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+header {
+	width: 100%;
+	height: auto;
+	background: url(images/Rayos/portada-estatica.png);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.portada {
+	width: 1200px;
+	height: 500px;
+	padding:  0 0;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.titular {
+	width: 100%;
+	height: auto;
+}
+.titular h1 {
+	text-align: left;
+}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+
+main {
+	width: 100%;
+	height: auto;
+	padding: 3% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.descripcion {
+	width: 1200px;
+	height: auto;
+	margin-bottom: 3%;
+	transition: all 300ms ease;
+}
+.parrafo-fractura {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.parrafo-info {
+	width: 100%;
+	height: auto;
+	padding: 0 5%;
+}
+.parrafo-info h2 {
+	color: #258a9a;
+}
+.parrafo-info p {
+	margin-top: 4%;
+	color: #2B2D42;
+}
+.parrafo-imagen {
+	width: 40%;
+	height: auto;
+	margin-top: 3%;
+	padding: 0 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.parrafo-imagen img {
+	width: 100%;
+	margin: 0 5%;
+}
+.cualidades {
+	width: 1200px;
+	height: auto;
+	margin-top: 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.cualidad {
+	width: 24%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.cualidad h3 {
+	color: #2B2D42;
+	font-weight: 800;
+	margin-top: 3%;
+}
+.cualidad p {
+	color: #2B2D42;
+	text-align: center;
+	margin-top: 3%;
+}
+
+.contenedor-preguntas {
+	width: 1200px;
+	height: auto;
+	transition: all 300ms ease;
+	margin-top: 5%;
+}
+.acordion {
+	max-width: 1200px;
+}
+.acordion .contentBx {
+	position: relative;
+	margin: 10px 20px;
+}
+.acordion .contentBx .label {
+	position: relative;
+	padding: 20px;
+	background: #5ac6d7;
+	color: white;
+	font-size: 4em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	cursor: pointer;
+}
+.acordion .contentBx .label::before {
+	content: '+';
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	font-size: 1.5em;
+}
+.acordion .contentBx.active .label::before {
+	content: '-';
+}
+.acordion .contentBx .content {
+	position: relative;
+	background: #bde8ef;
+	height: 0;
+	overflow: hidden;
+	transition: 0.5s;
+	overflow-y: auto;
+}
+.acordion .contentBx.active .content {
+	height: 170px;
+	padding: 20px;
+}
+.content p {
+	color: #2B2D42;
+}
+.precio {
+	width: 40%;
+	height: auto;
+	margin-top: 3%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.precio h3 {
+	color: #2B2D42;
+	font-size: 3.5em;
+	font-weight: 800;
+}
+.precio a {
+	width: 30%;
+	font-size: 3.2em;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	background: #258a9a;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	border-radius: 20px;
+	padding: 2% 2%;
+	transition: all 300ms ease;
+}
+.precio a:hover {
+	color: #258a9a;
+	background: #d7da2d;
+	transition: all 300ms ease;
+}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+footer {
+	width: 100%;
+	height: auto;
+	padding: 2% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.raya {
+	width: 1500px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	padding-top: 5%;
+	border-top: 1px solid #258a9a;
+}
+.pie-de-pagina {
+	width: 1200px;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.logo-pie {
+	width: 25%;
+}
+.logo-pie-imagen {
+	width: 50%;
+}
+.logo-pie-imagen img {
+	width: 100%;
+}
+.logo-pie h4 {
+	font-size: 3.5em;
+	color: #2B2D42;
+	margin-top: 7%;
+}
+.icono-pie {
+	width: 100%;
+	height: auto;
+	margin-top: 6%;
+}
+.icono-pie a {
+	font-size: 5em;
+	width: 10%;
+	margin-right: 5%;
+	color: #258a9a;
+	text-decoration: none;
+}
+.horario-pie {
+	width: 16%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.horario-pie h4 {
+	color: #2B2D42;
+	font-size: 3.2em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	text-decoration: none;
+}
+.horario-pie .titulo {
+	color: #258a9a;
+	font-size: 3.7em;
+	font-weight: 800;
+}
+.horario-pie .boton {
+	width: 70%;
+	padding: 5% 2%;
+	border-radius: 15px;
+	text-align: center;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	text-decoration: none;
+	color: white;
+	background: #258a9a;
+	font-size: 3.2em;
+	font-weight: 800;
+	transition: all 300ms ease;
+}
+.horario-pie .boton:hover {
+	color: #258a9a;
+	background: #d7da2d;
+	transition: all 300ms ease;
+}
+.copyrigth {
+	width: 100%;
+	height: auto;
+	padding-top: 6%;
+	padding-bottom: 2%;
+	text-align: center;
+}
+.copyrigth h4 {
+	font-size: 2.8em;
+	font-weight: 500;
+	color: gray;
+}
+
+/*--------- ♦♦♦♦ PANTALLAS O LAPTOPS GRANDES HORIZONTALMENTE ♦♦♦♦ -------- */
+
+@media screen and (max-width: 1520px) and (min-width: 1367px) and (orientation: landscape) {
+
+	.raya {
+		width: 1350px;
+		transition: all 300ms ease;
+	}
+}
+
+/*--------- ♦♦♦♦ PANTALLAS O LAPTOPS GRANDES HORIZONTALMENTE ♦♦♦♦ -------- */
+
+@media screen and (max-width: 1450px) and (min-width: 1367px) and (orientation: landscape) {
+
+/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+	
+	.barra-contenido {
+		width: 1020px;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 1020px;
+		transition: all 300ms ease;
+	}
+	.logo {
+		width: 150px;
+		transition: all 300ms ease;
+	}
+	nav ul li {
+		margin: 0 10px;
+	}
+	nav ul li a {
+		padding: 8px 12px;
+		font-size: 2.8em;
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	.portada {
+		width: 1020px;
+		transition: all 300ms ease;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 1020px;
+	}
+	.cualidades {
+		width: 1020px;
+	}
+	.contenedor-preguntas {
+		width: 1020px;
+	}
+	.acordion {
+		max-width: 1020px;
+	}
+	.precio a {
+		width: 35%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	.raya {
+		width: 1250px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 1020px;
+		transition: all 300ms ease;
+	}
+	.horario-pie {
+		width: 18%;
+	}
+	.horario-pie .boton {
+		width: 70%;
+	}
+
+}
+
+/*--------- ♦♦♦♦ LAPTOPS PEQUEÑAS O TABLETS GRANDES HORIZONTALMENTE ♦♦♦♦ -------- */
+
+@media screen and (max-width: 1366px) and (min-width: 1051px) and (orientation: landscape) {
+
+	/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+
+	.barra-contenido {
+		width: 1000px;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 1000px;
+		transition: all 300ms ease;
+	}
+	.logo {
+		width: 150px;
+		transition: all 300ms ease;
+	}
+	nav ul li {
+		margin: 0 7px;
+	}
+	nav ul li a {
+		font-size: 2.8em;
+	}
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-1366.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 1000px;
+		transition: all 300ms ease;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 1000px;
+	}
+	.cualidades {
+		width: 1000px;
+	}
+	.contenedor-preguntas {
+		width: 1000px;
+	}
+	.acordion {
+		max-width: 1000px;
+	}
+	.precio a {
+		width: 37%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	.raya {
+		width: 1150px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 1000px;
+		transition: all 300ms ease;
+	}
+	.horario-pie {
+		width: 18%;
+	}
+	.horario-pie .boton {
+		width: 70%;
+	}
+}
+
+/* ---------- ♦♦♦♦ ESTILOS SIN HOVER (SIN RESPUESTA) ♦♦♦♦ ---------*/
+
+@media (hover: none) and (max-width: 1366px) and (min-width: 1051px) and (orientation: landscape) {
+
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.precio a:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+	.horario-pie .boton:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+}
+
+/*--------- TABLETS HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 1090px) and (min-width: 960px) and (orientation: landscape) {
+
+	/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+
+	.barra-contenido {
+		width: 900px;
+	}
+	.contacto-texto h4 {
+		font-size: 2.6em;
+		margin-right: 5%;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 900px;
+		padding: 1% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 150px;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 0;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		font-size: 2.8em;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		width: 65%;
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.8em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: white;
+		background: #31b8cd;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 70px;
+		right: 60px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 25px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-1090.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 900px;
+		height: 450px;
+		transition: all 300ms ease;
+	}
+	.titular h1 {
+		font-size: 7em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 900px;
+	}
+	.parrafo-info h2{
+		font-size: 6em;
+	}
+	.parrafo-info p{
+		font-size: 3.4em;
+	}
+	.cualidades {
+		width: 900px;
+	}
+	.cualidad h3 {
+		font-size: 3.8em;
+	}
+	.cualidad p {
+		font-size: 3.2em;
+	}
+	.contenedor-preguntas {
+		width: 900px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3.8em;
+	}
+	.acordion {
+		max-width: 900px;
+	}
+	.content p {
+		font-size: 3.2em;
+	}
+	.precio h3 {
+		font-size: 3.2em;
+	}
+	.precio a {
+		font-size: 3em;
+		width: 39%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 1000px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 900px;
+		transition: all 300ms ease;
+	}
+	.logo-pie h4 {
+		font-size: 3em;
+	}
+	.horario-pie {
+		width: 22%;
+	}
+	.horario-pie h4 {
+		font-size: 3em;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 68%;
+		font-size: 3em;
+	}
+	.copyrigth {
+		padding-top: 10%;
+		padding-bottom: 2%;
+	}
+}
+
+/* ---------- ESTILOS SIN HOVER (SIN RESPUESTA) ---------*/
+
+@media (hover: none) and (max-width: 1090px) and (min-width: 960px) and (orientation: landscape) {
+
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.precio a:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+	.horario-pie .boton:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+}
+
+/*--------- CELULARES GRANDES HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 960px) and (min-width: 790px) and (orientation: landscape)  {
+
+/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+
+	.barra-contenido {
+		width: 700px;
+		padding: 1% 0;
+		justify-content: center;
+	}
+	.contacto-texto {
+		align-items: center;
+		justify-content: center;
+	}
+	.contacto-texto h4 {
+		font-size: 2.6em;
+		margin-right: 8%;
+	}
+	.contacto-icono {
+		display: none;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 700px;
+		padding: 1% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 150px;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 10px;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		line-height: 50px;
+		font-size: 2.6em;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		width: 65%;
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.6em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: white;
+		background: #31b8cd;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 75px;
+		right: 70px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 25px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-1090.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 700px;
+		height: 400px;
+		transition: all 300ms ease;
+	}
+	.titular h1 {
+		font-size: 7em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 700px;
+	}
+	.parrafo-info {
+		width: 100%;
+		padding: 0 0;
+	}
+	.parrafo-info h2{
+		font-size: 5.5em;
+	}
+	.parrafo-info p{
+		font-size: 3.3em;
+	}
+	.parrafo-imagen {
+		width: 45%;
+	}
+	.cualidades {
+		width: 700px;
+	}
+	.cualidad h3 {
+		font-size: 3.5em;
+	}
+	.cualidad p {
+		font-size: 3em;
+	}
+	.contenedor-preguntas {
+		width: 700px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3.5em;
+	}
+	.acordion {
+		max-width: 700px;
+	}
+	.content p {
+		font-size: 3em;
+	}
+	.precio {
+		width: 50%;
+	}
+	.precio h3 {
+		font-size: 3em;
+	}
+	.precio a {
+		font-size: 3em;
+		width: 39%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 800px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 700px;
+		transition: all 300ms ease;
+	}
+	.logo-pie {
+		width: 30%;
+	}
+	.logo-pie h4 {
+		font-size: 3em;
+	}
+	.horario-pie {
+		width: 26%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.horario-pie a {
+		font-size: 3em;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 76%;
+		font-size: 3em;
+	}
+	.copyrigth {
+		padding-top: 10%;
+		padding-bottom: 2%;
+	}
+}
+
+/* ---------- ESTILOS SIN HOVER (SIN RESPUESTA) ---------*/
+
+@media (hover: none) and (max-width: 960px) and (min-width: 790px) and (orientation: landscape) {
+
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.precio a:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+	.horario-pie .boton:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+}
+
+/*--------- CELULARES MEDIANOS HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 789px) and (min-width: 669px) and (orientation: landscape)  {
+
+/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+
+	.barra-contenido {
+		width: 630px;
+		padding: 1% 0;
+		justify-content: center;
+	}
+	.contacto-texto {
+		align-items: center;
+		justify-content: center;
+	}
+	.contacto-texto h4 {
+		font-size: 2.6em;
+		margin-right: 8%;
+	}
+	.contacto-icono {
+		display: none;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 630px;
+		padding: 1% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 130px;
+		background: url(images/logo-color.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding-right: 0.5%;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 10px;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		line-height: 50px;
+		font-size: 2.6em;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		width: 65%;
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.6em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: white;
+		background: #31b8cd;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 65px;
+		right: 70px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 25px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-840.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 630px;
+		height: 350px;
+		transition: all 300ms ease;
+	}
+	.titular h1 {
+		font-size: 6em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 630px;
+	}
+	.parrafo-info {
+		width: 100%;
+		padding: 0 0;
+	}
+	.parrafo-info h2{
+		font-size: 5em;
+	}
+	.parrafo-info p{
+		font-size: 3em;
+	}
+	.parrafo-imagen {
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+		margin: 5% 0;
+	}
+	.parrafo-imagen img {
+		margin: 5% 0; 
+	}
+	.cualidades {
+		width: 630px;
+	}
+	.cualidad {
+		width: 28%;
+	}
+	.cualidad h3 {
+		font-size: 3.5em;
+	}
+	.cualidad p {
+		font-size: 3em;
+	}
+	.contenedor-preguntas {
+		width: 630px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3.5em;
+	}
+	.acordion {
+		max-width: 630px;
+	}
+	.content p {
+		font-size: 3em;
+	}
+	.precio {
+		width: 55%;
+	}
+	.precio h3 {
+		font-size: 3em;
+	}
+	.precio a {
+		font-size: 3em;
+		width: 39%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 700px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 630px;
+		transition: all 300ms ease;
+	}
+	.logo-pie {
+		width: 33%;
+	}
+	.logo-pie h4 {
+		font-size: 2.8em;
+	}
+	.horario-pie {
+		width: 28%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.horario-pie h4 {
+		font-size: 2.8em;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 76%;
+		font-size: 3em;
+	}
+	.copyrigth {
+		padding-top: 10%;
+		padding-bottom: 2%;
+	}
+}
+
+/* ---------- ESTILOS SIN HOVER (SIN RESPUESTA) ---------*/
+
+@media (hover: none) and (max-width: 789px) and (min-width: 669px) and (orientation: landscape) {
+
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.precio a:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+	.horario-pie .boton:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+
+}
+
+/*--------- CELULARES PEQUEÑOS HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 668px) and (min-width: 560px) and (orientation: landscape)  {
+
+/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+
+	.barra-contenido {
+		width: 530px;
+		padding: 1% 0;
+		justify-content: center;
+	}
+	.contacto-texto {
+		align-items: center;
+		justify-content: center;
+	}
+	.contacto-texto h4 {
+		font-size: 2.2em;
+		margin-right: 8%;
+	}
+	.contacto-icono {
+		display: none;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 530px;
+		padding: 1.5% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 110px;
+		background: url(images/logo-color.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding-right: 0.5%;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 10px;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		line-height: 50px;
+		font-size: 2.3em;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		width: 65%;
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.3em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: white;
+		background: #31b8cd;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 50px;
+		right: 60px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-840.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 530px;
+		height: 300px;
+		transition: all 300ms ease;
+	}
+	.titular h1 {
+		font-size: 6em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 530px;
+	}
+	.parrafo-info {
+		width: 100%;
+		padding: 0 0;
+	}
+	.parrafo-info h2{
+		font-size: 4.9em;
+	}
+	.parrafo-info p{
+		font-size: 2.8em;
+	}
+	.parrafo-imagen {
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+		margin: 5% 0;
+	}
+	.parrafo-imagen img {
+		margin: 5% 0; 
+	}
+	.cualidades {
+		width: 530px;
+	}
+	.cualidad {
+		width: 28%;
+	}
+	.cualidad h3 {
+		font-size: 3.2em;
+	}
+	.cualidad p {
+		font-size: 2.8em;
+	}
+	.contenedor-preguntas {
+		width: 530px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3.2em;
+	}
+	.acordion {
+		max-width: 530px;
+	}
+	.content p {
+		font-size: 2.8em;
+	}
+	.precio {
+		width: 60%;
+	}
+	.precio h3 {
+		font-size: 3em;
+	}
+	.precio a {
+		font-size: 2.8em;
+		width: 39%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 600px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 530px;
+		transition: all 300ms ease;
+	}
+	.logo-pie {
+		width: 36%;
+	}
+	.logo-pie h4 {
+		font-size: 2.8em;
+	}
+	.horario-pie {
+		width: 34%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.horario-pie h4 {
+		font-size: 2.8em;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 78%;
+		font-size: 3em;
+	}
+	.copyrigth {
+		padding-top: 14%;
+		padding-bottom: 4%;
+	}
+	.copyrigth h4 {
+		font-size: 2.6em;
+	}
+
+}
+
+/* ---------- ESTILOS SIN HOVER (SIN RESPUESTA) ---------*/
+
+@media (hover: none) and (max-width: 668px) and (min-width: 560px) and (orientation: landscape) {
+
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.precio a:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+	.horario-pie .boton:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+}
+
+/*--------- TABLES GRANDES VERTICALMENTE -------- */
+
+@media screen and (max-width: 1024px) and (min-width: 835px) and (orientation: portrait)  {
+
+/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+
+	.barra-contenido {
+		width: 850px;
+	}
+	.contacto-texto h4 {
+		font-size: 2.6em;
+		margin-right: 5%;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 850px;
+		padding: 1% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 150px;
+		background: url(images/logo-color.png);
+		background-size: cover;
+		padding-right: 0.5%;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 0;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		font-size: 2.8em;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		width: 65%;
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.8em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: white;
+		background: #31b8cd;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 65px;
+		right: 60px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 25px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-1090.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 850px;
+		height: 450px;
+		transition: all 300ms ease;
+	}
+	.titular h1 {
+		font-size: 7em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 850px;
+	}
+	.parrafo-info h2{
+		font-size: 6em;
+	}
+	.parrafo-info p{
+		font-size: 3.4em;
+	}
+	.cualidades {
+		width: 850px;
+	}
+	.cualidad h3 {
+		font-size: 3.8em;
+	}
+	.cualidad p {
+		font-size: 3.2em;
+	}
+	.contenedor-preguntas {
+		width: 850px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3.8em;
+	}
+	.acordion {
+		max-width: 850px;
+	}
+	.content p {
+		font-size: 3.2em;
+	}
+	.precio h3 {
+		font-size: 3.2em;
+	}
+	.precio a {
+		font-size: 3em;
+		width: 39%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 900px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 850px;
+		transition: all 300ms ease;
+	}
+	.logo-pie h4 {
+		font-size: 3em;
+	}
+	.horario-pie {
+		width: 22%;
+	}
+	.horario-pie h4 {
+		font-size: 3em;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 74%;
+		font-size: 3em;
+	}
+	.copyrigth {
+		padding-top: 10%;
+		padding-bottom: 2%;
+	}
+}
+
+/* ---------- ESTILOS SIN HOVER (SIN RESPUESTA) ---------*/
+
+@media (hover: none) and (max-width: 1024px) and (min-width: 835px) and (orientation: portrait) {
+
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.precio a:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+	.horario-pie .boton:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+}
+
+/*--------- TABLES MEDIANAS VERTICALMENTE -------- */
+
+@media screen and (max-width: 834px) and (min-width: 769px) and (orientation: portrait)  {
+
+/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+
+	.barra-contenido {
+		width: 700px;
+		padding: 1% 0;
+	}
+	.contacto-texto {
+		align-items: center;
+		justify-content: center;
+	}
+	.contacto-texto h4 {
+		font-size: 2.6em;
+		margin-right: 8%;
+	}
+	.contacto-icono {
+		display: none;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 700px;
+		padding: 1% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 130px;
+		background: url(images/logo-color.png);
+		background-size: cover;
+		padding-right: 0.5%;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 10px;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		line-height: 50px;
+		font-size: 2.6em;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		width: 65%;
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.6em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: white;
+		background: #31b8cd;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 65px;
+		right: 60px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 25px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-840.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 700px;
+		height: 400px;
+		transition: all 300ms ease;
+	}
+	.titular h1 {
+		font-size: 7em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 700px;
+	}
+	.parrafo-info {
+		width: 100%;
+		padding: 0 0;
+	}
+	.parrafo-info h2{
+		font-size: 5.5em;
+	}
+	.parrafo-info p{
+		font-size: 3.3em;
+	}
+	.parrafo-imagen {
+		width: 45%;
+	}
+	.cualidades {
+		width: 700px;
+	}
+	.cualidad h3 {
+		font-size: 3.5em;
+	}
+	.cualidad p {
+		font-size: 3em;
+	}
+	.contenedor-preguntas {
+		width: 700px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3.5em;
+	}
+	.acordion {
+		max-width: 700px;
+	}
+	.content p {
+		font-size: 3em;
+	}
+	.precio {
+		width: 50%;
+	}
+	.precio h3 {
+		font-size: 3em;
+	}
+	.precio a {
+		font-size: 3em;
+		width: 39%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 800px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 700px;
+		transition: all 300ms ease;
+	}
+	.logo-pie {
+		width: 30%;
+	}
+	.logo-pie h4 {
+		font-size: 3em;
+	}
+	.horario-pie {
+		width: 26%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.horario-pie h4 {
+		font-size: 3em;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 76%;
+		font-size: 3em;
+	}
+	.copyrigth {
+		padding-top: 10%;
+		padding-bottom: 2%;
+	}
+}
+
+/* ---------- ESTILOS SIN HOVER (SIN RESPUESTA) ---------*/
+
+@media (hover: none) and (max-width: 834px) and (min-width: 769px) and (orientation: portrait) {
+
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.precio a:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+	.horario-pie .boton:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+}
+
+/*--------- TABLES PEQUEÑAS VERTICALMENTE -------- */
+
+@media screen and (max-width: 769px) and (min-width: 430px) and (orientation: portrait)  {
+
+	/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+
+	.barra-contenido {
+		width: 640px;
+		padding: 1% 0;
+		justify-content: center;
+	}
+	.contacto-texto {
+		align-items: center;
+		justify-content: center;
+	}
+	.contacto-texto h4 {
+		font-size: 2.6em;
+		margin-right: 8%;
+	}
+	.contacto-icono {
+		display: none;
+	}
+	
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 640px;
+		padding: 1% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 130px;
+		background: url(images/logo-color.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding-right: 0.5%;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 10px;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		line-height: 50px;
+		font-size: 2.6em;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		width: 65%;
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.6em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: white;
+		background: #31b8cd;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 60px;
+		right: 70px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 25px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-840.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 630px;
+		height: 350px;
+		transition: all 300ms ease;
+	}
+	.titular h1 {
+		font-size: 6em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 630px;
+	}
+	.parrafo-info {
+		width: 100%;
+		padding: 0 0;
+	}
+	.parrafo-info h2{
+		font-size: 5em;
+	}
+	.parrafo-info p{
+		font-size: 3em;
+	}
+	.parrafo-imagen {
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+		margin: 5% 0;
+	}
+	.parrafo-imagen img {
+		margin: 5% 0; 
+	}
+	.cualidades {
+		width: 630px;
+	}
+	.cualidad {
+		width: 28%;
+	}
+	.cualidad h3 {
+		font-size: 3.5em;
+	}
+	.cualidad p {
+		font-size: 3em;
+	}
+	.contenedor-preguntas {
+		width: 630px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3.5em;
+	}
+	.acordion {
+		max-width: 630px;
+	}
+	.content p {
+		font-size: 3em;
+	}
+	.precio {
+		width: 55%;
+	}
+	.precio h3 {
+		font-size: 3em;
+	}
+	.precio a {
+		font-size: 3em;
+		width: 39%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 700px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 630px;
+		transition: all 300ms ease;
+	}
+	.logo-pie {
+		width: 33%;
+	}
+	.logo-pie h4 {
+		font-size: 2.8em;
+	}
+	.horario-pie {
+		width: 28%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.horario-pie h4 {
+		font-size: 2.8em;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 76%;
+		font-size: 3em;
+	}
+	.copyrigth {
+		padding-top: 10%;
+		padding-bottom: 2%;
+	}
+}
+
+/* ---------- ESTILOS SIN HOVER (SIN RESPUESTA) ---------*/
+
+@media (hover: none) and (max-width: 769px) and (min-width: 430px) and (orientation: portrait) {
+
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.precio a:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+	.horario-pie .boton:hover {
+		color: white;
+		background: #258a9a;
+		transition: all 300ms ease;
+	}
+}
+
+/* ---------- CELULARES GRANDES VERTICALMENTE ---------*/
+
+@media screen and (max-width: 429px) and (min-width: 391px) and (orientation: portrait)  {
+
+	/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+
+	.barra-contacto {
+		display: none;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 360px;
+		padding: 2% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 100px;
+		background: url(images/logo-color.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding-right: 0.5%;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 10px;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		line-height: 50px;
+		font-size: 2.3em;
+	}
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	nav.sticky .navbar ul li a {
+		color: #31b8cd;
+		font-size: 2.3em;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.3em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 10px;
+		right: 35px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-celular.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 360px;
+		height: 200px;
+		transition: all 300ms ease;
+	}
+	.titular {
+		width: 100%;
+	}
+	.titular h1 {
+		font-size: 5em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 360px;
+	}
+	.parrafo-fractura {
+		margin-top: 8%;
+	}
+	.parrafo-info {
+		width: 100%;
+		padding: 0 0;
+	}
+	.parrafo-info h2{
+		font-size: 4.3em;
+	}
+	.parrafo-info p{
+		font-size: 2.8em;
+	}
+	.parrafo-imagen {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		margin: 5% 0;
+	}
+	.parrafo-imagen img {
+		margin: 5% 0; 
+	}
+	.cualidades {
+		width: 360px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.cualidad {
+		width: 80%;
+		padding: 5% 0;
+	}
+	.cualidad h3 {
+		font-size: 3.2em;
+	}
+	.cualidad p {
+		font-size: 2.8em;
+	}
+	.contenedor-preguntas {
+		width: 360px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3.2em;
+	}
+	.acordion {
+		max-width: 360px;
+	}
+	.content p {
+		font-size: 2.8em;
+	}
+	.precio {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-items: flex-start;
+	}
+	.precio h3 {
+		font-size: 3em;
+		margin-top: 3%;
+	}
+	.precio a {
+		font-size: 2.8em;
+		width: 42%;
+		margin-top: 5%;
+	}
+	
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 370px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 340px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: all 300ms ease;
+	}
+	.logo-pie {
+		width: 55%;
+	}
+	.logo-pie h4 {
+		font-size: 2.6em;
+	}
+	.horario-pie {
+		width: 55%;
+		padding: 8% 0;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.horario-pie h4 {
+		font-size: 2.8em;
+		margin-top: 15%;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 75%;
+		margin-top: 15%;
+		font-size: 3em;
+	}
+	.copyrigth {
+		padding-top: 10%;
+		padding-bottom: 2%;
+	}
+}
+
+/* ---------- CELULARES MEDIANOS VERTICALMENTE ---------*/
+
+@media screen and (max-width: 390px) and (min-width: 350px) and (orientation: portrait)  {
+
+	/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+	
+	.barra-contacto {
+		display: none;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 330px;
+		padding: 2% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 100px;
+		background: url(images/logo-color.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding-right: 0.5%;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 10px;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		line-height: 50px;
+		font-size: 2.3em;
+	}
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	nav.sticky .navbar ul li a {
+		color: #31b8cd;
+		font-size: 2.3em;
+	}
+	nav.sticky  nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.3em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 7px;
+		right: 35px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-celular-2.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 330px;
+		height: 200px;
+		transition: all 300ms ease;
+	}
+	.titular {
+		width: 100%;
+	}
+	.titular h1 {
+		font-size: 4.5em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 330px;
+	}
+	.parrafo-fractura {
+		margin-top: 8%;
+	}
+	.parrafo-info {
+		width: 100%;
+		padding: 0 0;
+	}
+	.parrafo-info h2{
+		font-size: 4em;
+	}
+	.parrafo-info p{
+		font-size: 2.6em;
+	}
+	.parrafo-imagen {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		margin: 5% 0;
+	}
+	.parrafo-imagen img {
+		margin: 5% 0; 
+	}
+	.cualidades {
+		width: 330px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.cualidad {
+		width: 80%;
+		padding: 5% 0;
+	}
+	.cualidad h3 {
+		font-size: 3.2em;
+	}
+	.cualidad p {
+		font-size: 2.6em;
+	}
+	.contenedor-preguntas {
+		width: 330px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3.2em;
+	}
+	.acordion {
+		max-width: 330px;
+	}
+	.content p {
+		font-size: 2.6em;
+	}
+	.precio {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-items: flex-start;
+	}
+	.precio h3 {
+		font-size: 3em;
+		margin-top: 3%;
+	}
+	.precio a {
+		font-size: 2.6em;
+		width: 45%;
+		margin-top: 5%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 350px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 330px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: all 300ms ease;
+	}
+	.logo-pie {
+		width: 55%;
+	}
+	.logo-pie h4 {
+		font-size: 2.6em;
+	}
+	.horario-pie {
+		width: 55%;
+		padding: 8% 0;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.horario-pie h4 {
+		font-size: 2.8em;
+		margin-top: 15%;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 75%;
+		margin-top: 15%;
+		font-size: 3em;
+	}
+	.copyrigth {
+		padding-top: 10%;
+		padding-bottom: 2%;
+	}
+}
+
+/* ---------- CELULARES MEDIANOS VERTICALMENTE ---------*/
+
+@media screen and (max-width: 360px) and (min-width: 350px) and (orientation: portrait)  {
+
+	/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+
+	.barra-contacto {
+		display: none;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 320px;
+		padding: 2% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 100px;
+		background: url(images/logo-color.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding-right: 0.5%;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 10px;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		line-height: 50px;
+		font-size: 2.3em;
+	}
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	nav.sticky .navbar ul li a {
+		color: #31b8cd;
+		font-size: 2.3em;
+	}
+	nav.sticky  nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.3em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 10px;
+		right: 35px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-celular-2.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 320px;
+		height: 200px;
+		transition: all 300ms ease;
+	}
+	.titular {
+		width: 100%;
+	}
+	.titular h1 {
+		font-size: 4.3em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 320px;
+	}
+	.parrafo-fractura {
+		margin-top: 10%;
+	}
+	.parrafo-info {
+		width: 100%;
+		padding: 0 0;
+	}
+	.parrafo-info h2{
+		font-size: 4em;
+	}
+	.parrafo-info p{
+		font-size: 2.6em;
+	}
+	.parrafo-imagen {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		margin: 5% 0;
+	}
+	.parrafo-imagen img {
+		margin: 5% 0; 
+	}
+	.cualidades {
+		width: 330px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.cualidad {
+		width: 80%;
+		padding: 5% 0;
+	}
+	.cualidad h3 {
+		font-size: 3.2em;
+	}
+	.cualidad p {
+		font-size: 2.6em;
+	}
+	.contenedor-preguntas {
+		width: 330px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3.2em;
+	}
+	.acordion {
+		max-width: 330px;
+	}
+	.content p {
+		font-size: 2.6em;
+	}
+	.precio {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-items: flex-start;
+	}
+	.precio h3 {
+		font-size: 3em;
+		margin-top: 3%;
+	}
+	.precio a {
+		font-size: 2.6em;
+		width: 45%;
+		margin-top: 5%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 330px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 310px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: all 300ms ease;
+	}
+	.logo-pie {
+		width: 55%;
+	}
+	.logo-pie h4 {
+		font-size: 2.6em;
+	}
+	.horario-pie {
+		width: 60%;
+		padding: 8% 0;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.horario-pie h4 {
+		font-size: 2.8em;
+		margin-top: 15%;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 74%;
+		margin-top: 15%;
+		font-size: 3em;
+	}
+	.copyrigth {
+		padding-top: 10%;
+		padding-bottom: 2%;
+	}
+	.copyrigth h4 {
+		font-size: 2.6em;
+	}
+}
+
+/* ---------- CELULARES PEQUEÑOS VERTICALMENTE ---------*/
+
+@media screen and (max-width: 349px) and (min-width: 310px) and (orientation: portrait)  {
+
+/*----------- CONTENIDO DE INFORMACIÓN ---------------*/
+	
+	.barra-contacto {
+		display: none;
+	}
+
+/*----------- CONTENIDO DE LA BARRA DE NAVEGACIÓN ---------------*/
+
+	.navbar {
+		width: 280px;
+		padding: 2% 0;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.logo {
+		width: 100px;
+		background: url(images/logo-color.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding-right: 0.5%;
+		transition: all 300ms ease;
+	}
+	nav ul {
+		margin-top: 10px;
+		float: left;
+	}
+	.show + a, ul {
+		display: none;
+	}
+	nav ul li {
+		margin: 0;
+	}
+	nav ul li,nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav ul li a {
+		color: #31b8cd;
+		line-height: 50px;
+		font-size: 2.3em;
+	}
+	nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	nav.sticky .navbar ul li a {
+		color: #31b8cd;
+		font-size: 2.3em;
+	}
+	nav.sticky  nav ul li a:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+	.show {
+		display: block;
+		color: #31b8cd;
+		line-height: 35px;
+		text-decoration: none;
+		font-size: 2.3em;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-weight: 800;
+		padding: 0 15px;
+		border-radius: 20px;
+		transition: all 300ms ease;
+		cursor: pointer;
+	}
+	.show:hover {
+		color: #31b8cd;
+		background: transparent;
+	}
+	.icon {
+		display: block;
+		color: #31b8cd;
+		position: absolute;
+		top: 10px;
+		right: 35px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+	nav ul ul a {
+		padding-left: 30px;
+	}
+	[id^=btn]:checked + ul {
+		display: block;
+	}
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+	nav ul ul li a {
+		line-height: 40px;
+		padding-right: 80px;
+	}
+	span.cancel:before {
+		content: '\f00d';
+	}
+
+/*----------- CONTENIDO DE LA PORTADA ---------------*/
+
+	header {
+		background: url(images/Rayos/portada-estatica-celular.png);
+		background-size: cover;
+		background-position: center;
+	}
+	.portada {
+		width: 280px;
+		height: 150px;
+		transition: all 300ms ease;
+	}
+	.titular {
+		width: 100%;
+	}
+	.titular h1 {
+		font-size: 4em;
+	}
+
+/*----------- CONTENIDO DEL CUERPO ---------------*/
+
+	.descripcion {
+		width: 280px;
+	}
+	.parrafo-fractura {
+		margin-top: 10%;
+	}
+	.parrafo-info {
+		width: 100%;
+		padding: 0 0;
+	}
+	.parrafo-info h2{
+		font-size: 3.8em;
+	}
+	.parrafo-info p{
+		font-size: 2.5em;
+	}
+	.parrafo-imagen {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		margin: 5% 0;
+	}
+	.parrafo-imagen img {
+		margin: 5% 0; 
+	}
+	.cualidades {
+		width: 280px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.cualidad {
+		width: 80%;
+		padding: 5% 0;
+	}
+	.cualidad h3 {
+		font-size: 3.2em;
+	}
+	.cualidad p {
+		font-size: 2.6em;
+	}
+	.contenedor-preguntas {
+		width: 280px;
+	}
+	.acordion .contentBx .label {
+		font-size: 3em;
+	}
+	.acordion {
+		max-width: 280px;
+	}
+	.content p {
+		font-size: 2.6em;
+	}
+	.precio {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-items: flex-start;
+	}
+	.precio h3 {
+		font-size: 2.8em;
+		margin-top: 3%;
+	}
+	.precio a {
+		font-size: 2.6em;
+		width: 50%;
+		padding: 2.5% 2%;
+		margin-top: 5%;
+	}
+
+/*----------- CONTENIDO DE PIE DE PÁGINA ---------------*/
+
+	footer {
+		padding: 5% 0;
+	}
+	.raya {
+		width: 290px;
+		transition: all 300ms ease;
+	}
+	.pie-de-pagina {
+		width: 280px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: all 300ms ease;
+	}
+	.logo-pie {
+		width: 65%;
+	}
+	.logo-pie h4 {
+		font-size: 2.6em;
+	}
+	.horario-pie {
+		width: 65%;
+		padding: 8% 0;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.horario-pie h4 {
+		font-size: 2.8em;
+		margin-top: 15%;
+	}
+	.horario-pie .titulo {
+		font-size: 3.3em;
+	}
+	.horario-pie .boton {
+		width: 70%;
+		margin-top: 15%;
+		font-size: 2.8em;
+	}
+	.copyrigth {
+		padding-top: 10%;
+		padding-bottom: 2%;
+	}
+	.copyrigth h4 {
+		font-size: 2.2em;
+	}
+}
